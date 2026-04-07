@@ -9,6 +9,10 @@ from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+
 ps = PorterStemmer()
 tfidf = joblib.load('text_vector.pkl')
 model = joblib.load('model.pkl')
